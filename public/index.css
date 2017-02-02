@@ -1,0 +1,119 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('background.png');
+  font-family: 'Roboto', sans-serif;
+  padding-top: 100px;
+}
+
+#header {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: url('logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#icon-left,
+#icon-right {
+  background-image: url('icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 100%;
+}
+
+#icon-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#root {
+  display: flex;
+}
+
+#content-left {
+  flex: 0 0 220px;
+}
+
+#content-right {
+  flex: 1 1 auto;
+}
+
+#board {
+  position: relative;
+}
+
+textarea {
+  height: 200px;
+  width: 200px;
+}
+
+button {
+  display: block;
+  width: 200px;
+  height: 25px;
+}
+
+#output {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 200px;
+}
+
+.board-row {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.board-cell {
+  flex: 0 0 50px;
+  height: 100%;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.board-row:first-child .board-cell {
+  border-top-width: 2px;
+}
+
+.board-row:last-child .board-cell {
+  border-bottom-width: 2px;
+}
+
+.board-cell:first-child {
+  border-left-width: 2px;
+}
+
+.board-cell:last-child {
+  border-right-width: 2px;
+}
+
+.robot {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('awesomo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 1s;
+}

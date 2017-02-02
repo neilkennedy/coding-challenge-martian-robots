@@ -1,0 +1,54 @@
+{
+  "name": "robotgrid",
+  "version": "0.0.1",
+  "description": "Coding Challenge app",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -a localhost -p 8080 -o http://localhost:8080/index.html",
+    "build": "browserify --debug src/index.js -o public/bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "test": "jest"
+  },
+  "author": "Neil Kennedy",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-jest": "^18.0.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.0.0",
+    "eslint": "^3.14.1",
+    "http-server": "^0.9.0",
+    "jest": "^18.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-const-assign": "warn",
+      "no-this-before-super": "warn",
+      "no-undef": "warn",
+      "no-unreachable": "warn",
+      "no-unused-vars": "warn",
+      "constructor-super": "warn",
+      "valid-typeof": "warn"
+    }
+  },
+  "dependencies": {}
+}
